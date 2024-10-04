@@ -13,8 +13,8 @@ class UsersTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name' => 'Admin User',
-            'email' => 'admin@example.com',
-            'password' => Hash::make('password'), // Use Hash::make to hash the password
+            'email' => 'adehpo@gmail.com',
+            'password' => Hash::make('12345678'), // Use Hash::make to hash the password
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);

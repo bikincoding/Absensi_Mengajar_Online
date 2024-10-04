@@ -9,6 +9,9 @@ use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\ClassController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\ApplicationController;
+use App\Http\Controllers\AcademicYearController;
+use App\Http\Controllers\AttendanceController;
+use App\Http\Controllers\TeachingHourController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,4 +41,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('classes', ClassController::class);
     Route::resource('subjects', SubjectController::class);
     Route::resource('applications', ApplicationController::class);
+    Route::resource('academic_years', AcademicYearController::class);
+    Route::resource('attendances', AttendanceController::class);
+    Route::resource('teaching_hours', TeachingHourController::class);
 });

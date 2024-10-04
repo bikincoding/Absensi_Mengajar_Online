@@ -15,7 +15,7 @@ class AttendanceTableSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('attendance')->insert([
+        DB::table('attendances')->insert([
             ['teacher_id' => 1, 'subject_id' => 1, 'application_id' => 1, 'teaching_hour_id' => 1, 'class_id' => 1, 'learning_proof' => 'Proof 1', 'learning_proof_director' => 'Proof Director 1', 'academic_year_id' => 1, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             ['teacher_id' => 2, 'subject_id' => 2, 'application_id' => 2, 'teaching_hour_id' => 2, 'class_id' => 2, 'learning_proof' => 'Proof 2', 'learning_proof_director' => 'Proof Director 2', 'academic_year_id' => 1, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
             ['teacher_id' => 3, 'subject_id' => 3, 'application_id' => 1, 'teaching_hour_id' => 3, 'class_id' => 3, 'learning_proof' => 'Proof 3', 'learning_proof_director' => 'Proof Director 3', 'academic_year_id' => 2, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],

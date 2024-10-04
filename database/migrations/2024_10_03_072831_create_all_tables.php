@@ -78,16 +78,16 @@ class CreateAllTables extends Migration
         });
 
     
-        Schema::create('attendance', function (Blueprint $table) {
+        Schema::create('attendances', function (Blueprint $table) {
             $table->id();
             $table->foreignId('teacher_id')->constrained('teachers');
             $table->foreignId('subject_id')->constrained('subjects');
-            $table->foreignId('application_id')->constrained('applications'); //input checkbox when data active
-            $table->foreignId('teaching_hour_id')->constrained('teaching_hours'); //input checkbox when data active
-            $table->foreignId('class_id')->constrained('classes');
+            $table->foreignId('application_id')->constrained('applications'); //show input checkbox when status data active
+            $table->foreignId('teaching_hour_id')->constrained('teaching_hours'); //show input checkbox when status data active
+            $table->foreignId('class_id')->constrained('classes'); //show input checkbox when status data active
             $table->text('learning_proof'); //input image
             $table->text('learning_proof_director'); //input image
-            $table->foreignId('academic_year_id')->constrained('academic_years');
+            $table->foreignId('academic_year_id')->constrained('academic_years'); //auto input with active academic_year
             $table->timestamps();
         });
 
@@ -153,7 +153,7 @@ class CreateAllTables extends Migration
         Schema::dropIfExists('class_progress_reports');
         Schema::dropIfExists('class_students');
         Schema::dropIfExists('guardians');
-        Schema::dropIfExists('attendance');
+        Schema::dropIfExists('attendances');
         Schema::dropIfExists('academic_years');
         Schema::dropIfExists('classes');
         Schema::dropIfExists('applications');
@@ -161,14 +161,6 @@ class CreateAllTables extends Migration
         Schema::dropIfExists('teaching_hours');
         Schema::dropIfExists('subjects');
         Schema::dropIfExists('students');
-        
-        
-        
-        
-        
-        
-        
-        
         
     }
 }

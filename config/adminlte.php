@@ -358,8 +358,8 @@ return [
     ],
     
     [
-        'text' => 'Attendance',
-        'url'  => 'admin/attendance',
+        'text' => 'Attendances',
+        'url'  => 'admin/attendances',
         'icon' => 'fas fa-fw fa-calendar-check',
     ],
     
@@ -371,7 +371,7 @@ return [
     
     [
         'text' => 'Academic Years',
-        'url'  => 'admin/academic-years',
+        'url'  => 'admin/academic_years',
         'icon' => 'fas fa-fw fa-calendar',
     ],
     
@@ -384,6 +384,12 @@ return [
     [
         'text' => 'Applications',
         'url'  => 'admin/applications',
+        'icon' => 'fas fa-fw fa-mobile-alt',
+    ],
+
+    [
+        'text' => 'Teaching Hours',
+        'url'  => 'admin/teaching_hours',
         'icon' => 'fas fa-fw fa-mobile-alt',
     ],
 
